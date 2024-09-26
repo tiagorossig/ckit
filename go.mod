@@ -40,3 +40,5 @@ require (
 	google.golang.org/protobuf v1.34.2 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/hashicorp/memberlist => github.com/tiagorossig/memberlist v0.0.0-20240926204420-eb2921b17973

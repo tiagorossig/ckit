@@ -185,6 +185,8 @@ func NewNode(cli *http.Client, cfg Config) (*Node, error) {
 		mlc.LogOutput = log.NewStdlibAdapter(level.Debug(log.With(cfg.Log, "component", "memberlist")))
 	}
 
+	level.Debug(cfg.Log).Log("msg", "memberlist hostname", "now", mlc.Name)
+
 	n := &Node{
 		log: cfg.Log,
 		cfg: cfg,
